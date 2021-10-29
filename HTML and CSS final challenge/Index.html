@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width" />
+        <title></title>
+        <link rel="stylesheet" a href="./Final_Challenge.css">
+    </head>
+<body class="container">
+
+    <!--NAVBAR-->
+    <div class="NavBar">
+        <a class="Active" href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#GitHub">Github </a>
+        <a href="#Contact">Contact</a>
+    </div>
+    <!--END OF NAVBAR-->
+   
+         <!--HOME-->
+    <div id="Home">
+        <video autoplay muted loop id="HomeVideo">
+          <source src="./Videos/Network - 12716.mp4" type="video/mp4"> 
+            The video failed to run
+        </video>
+    </div>
+        <!--END OF HOME-->
+
+         <!--VIDEO TEXT-->
+    <div class="VideoText">
+        <h1 class="VideoTextColor">Kathryn's Portfolio</h1>
+        <strong>
+            <p class="Center">
+            <q>Good software, like wine, takes time.</q><br>
+                -Joel Spolsky
+            <br>
+            <br>
+            My name is Kathryn.  Welcome to my portfolio website.  On it, I will tell you about my background and experience.
+            <br>
+            Thank your for stopping by and enjoy!
+            </p>
+        </strong>
+    </div>
+        <!--END OF VIDEO TEXT-->
+
+         <!--ABOUT-->
+    <div class="Row" id="About">
+        <!--left column-->
+        <div class="Column_1">
+            <img src="./Images/laptop-336369_1920.jpg" alt="Image missing">
+        </div>
+        <!--right column-->
+        <div class="Column_2">
+            <h2>About</h2>
+            <p>I am studying to be a software developer and am enjoying it very much.  Sure, it has difficulties, but what career doesn't?
+            <br>
+                I am studying at <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>, and currently taking their Software Developer Bootcamp.
+        </div>
+    </div>
+         <!--END OF ABOUT-->
+
+         <!--GITHUB-->
+    <div class="Row" id="GitHub">
+        <!--left column-->
+        <div class="Column_1">
+            <h2>GitHub</h2>
+            <p>You can view my coding projects on my GitHub profile here:<a href="https://github.com/KitKat2002" target="_blank">KitKat2002</a></p>
+        </div>
+        <!--right column-->
+        <div class="Column_2">
+            <a href="https://github.com" target="_blank"><img src="./Images/GitHub_Logo.png" alt="GitHub logo"></a>
+        </div>
+    </div>
+        <!--END OF GITHUB-->
+
+        <!--CONTACT-->
+    <div class="Row" id="Contact">
+        <!--column 1-->
+        <div class="Column_1 ColumnTall">
+            <img src="./Images/iphone-410311_1280.jpg" alt="Contact Image">
+        </div>
+        <div class="Column_2 ColumnTall">
+            <h2>Contact</h2>
+            <form action="https://formspree.io/f/xbjqweyq" method="POST">
+            <label>Name:</label>
+                <input type="text" id="Name" name="Name" placeholder="Please enter your name here">
+            <label>Email:</label>
+                <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+            <label>Message:</label>
+                <input type="text" id="Message" name="Message" placeholder="Please enter your message here">
+                <input type="submit" value="SUBMIT">
+          </form>
+        </div>
+    </div>
+    <footer class="Center">Kathryn's portfolio</footer>
+</body>
+</html>
