@@ -1,6 +1,11 @@
+html {
+    scroll-behavior:smooth;
+}
+
 body {
     margin: 0%
 }
+
 h2 {
     text-transform: uppercase;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -8,11 +13,13 @@ h2 {
     margin-top: 3%;
     color:black;
 }
+
 h2:hover {
     filter:grayscale(10%);
     transform: scale(1.2);
     transition: transform 1s;
 }
+
 .VideoTextColor  {
     color:burlywood;
 }
@@ -24,46 +31,61 @@ p {
     padding-left: 25px;
     padding-right: 25px;
 }
+
 p:hover {
     transition: transform 1s;
     transform: scale(1.01);
 }
+
 .center {
     text-align: center;
 }
+
 .center:hover {
     transition: transform 3s;
     transform: scale(1.2);
 }
+
 a {
     color: blue;
+    cursor: pointer; 
+    text-decoration: underline;
 }
+
+q {
+    font-style: italic;
+}
+
 img {
     filter: grayscale(50%);
     border-radius: 10px;
     max-width: 100%;
-    height: 340px;
+    max-height: 100%;
     display: block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto auto auto auto;
 }
+
 img:hover {
     filter: grayscale(7%);
     transition: transform 2s;
     transform: scale(1.2);
 }
+
 @media screen and (max-width: 576px) {
     img {
         height: 100px;
         margin-top: 150px;
     }
 }
+
 footer {
     text-align:center;
     padding: 4%;
     color:navy;
     background-color:silver;
 }
+
 .NavBar {
     overflow: hidden;
     background-color:silver;
@@ -74,10 +96,12 @@ footer {
     -webkit-animation: moveNav 5s;
     animation: moveNav 5s;
 }
+
 @keyframes moveNave {
     from {left: -100vw;}
     to {left: 0vw;}
 }
+
 .NavBar a {
     float: left;
     display: block;
@@ -91,24 +115,31 @@ footer {
     -webkit-animation: moveNavText 5.75s;
     animation: moveNavText 5.75s;
 }
+
 @keyframes moveNavText {
 from {top: -100vw;}
 to {top: 0vw;}
 }
+
 @media screen and (max-width: 576px) {
     .NavBar a{
         width: 25%;
         font-size: 12px;
     }
 }
+
 .NavBar a:hover {
     background-color:teal;
     color:white;
     font-weight:bold;
+    cursor: pointer;
+    transition: 0.5s ease-in;
 }
-.NavBar a.Active {
+
+.NavBar a.active {
     background-color:darkgray;
 }
+
 #HomeVideo {
     position: fixed;
     right: 0;
@@ -116,6 +147,14 @@ to {top: 0vw;}
     min-width: 100%;
     z-index: -1;
 }
+
+@media screen and (max-width: 576px) {
+    #Typing_Video {
+        display: none;
+    }
+}
+
+
 .VideoText {
     background:rgba(0,0,0,0.5);
     color:white;
@@ -125,6 +164,7 @@ to {top: 0vw;}
     -webkit-animation: moveVideoText 5.75s;
     animation:moveVideoText 5.75s;
 }
+
 @keyframes moveVideoText {
     from{top: -100vw;}
     to{top:0vw};
@@ -133,6 +173,121 @@ to {top: 0vw;}
 * {
     box-sizing: border-box;
 }
+
+/*  SLIDE SHOW STYLING */
+#Slideshow_Background {
+    background: rgba(255, 255, 255, 0.35);  
+}
+
+.mySlides{
+    display: none; /* This prevents the images from being displayed, we will use JS to display these */
+}
+
+/* Slideshow section / container */
+.Slideshow_Container {
+    width: 30vw; 
+    height: auto; 
+    padding-top: 4%;
+    position: relative; 
+}
+
+/* Remove the underline from the previous and next buttons on the slideshow */
+.Slideshow_Container a {
+    text-decoration: none;
+}
+
+/* Images contained within the slideshow */
+.Slideshow_Images {
+    text-align: center;
+    vertical-align: middle; 
+    height: auto;
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75);
+    width: 100%; 
+}
+
+img {
+    width: 50%;
+    margin: 1px auto;
+    display: block;
+}
+/* Next and previous buttons */
+.Previous, .Next {
+    cursor: pointer;
+    position: absolute; 
+    top: 50%; 
+    width: auto; 
+    padding: 5px; 
+    color: darkgray; 
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 0 3px 3px 0; 
+    user-select: none; 
+    transition: 0.6s ease;
+}
+
+/* Positioning the next button on the right hand side */
+.Next {
+    right: 0; 
+    border-radius: 3px 0 0 3px; 
+}
+
+/* Hover effect on slide show buttons */
+.Previous:hover, .Next:hover {
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: white; 
+}
+
+/* Slideshow text */
+.text {
+    color: white; 
+    padding: 2px;
+    position: absolute; 
+    bottom: 0; 
+    width: 100%; 
+    text-align: center; 
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: 1px;
+    font-size: 18px; 
+    background-color: rgba(0, 0, 0, 0.75); 
+    border-radius: 0px 0px 7px 7px; 
+}
+
+/* Styling of the dots under the slideshow */
+.dot {
+    cursor: pointer; 
+    height: 4px; 
+    width: 4px;
+    margin: 4px;
+    background-color: slategray; 
+    border-radius: 50%;
+    display: inline-block; 
+    transition: background-color 0.6s ease; 
+    z-index: 1; 
+}
+
+/* Hover effect for slideshow dots */
+.active, .dot:hover {
+    background-color: white; 
+}
+
+/* Fading animation for slideshow */
+.fade {
+    animation-name: fade; 
+    animation-duration: 1.5s;
+    -webkit-animation-name: fade; 
+    -webkit-animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4;} 
+    to {opacity: 1;} 
+}
+
+@keyframes fade {
+    from {opacity: .4;}
+    to {opacity: 1;} 
+}
+
 .Column_1 {
     float: left;
     width: 50%;
@@ -141,11 +296,13 @@ to {top: 0vw;}
     height: 400px;
     background-color:blanchedalmond;
 }
+
 @media screen and (max-width: 576px) {
     .Column_1 {
         overflow: auto;
     }
 }
+
 .Column_2 {
     float: left;
     width: 50%;
@@ -154,15 +311,18 @@ to {top: 0vw;}
     height: 400px;
     background-color:wheat;
 }
+
 .ColumnTall {
     padding-top: 3.5%;
     height: 450px;
 }
+
 .Row:after {
     content: "";
     display: table;
     clear: both;
 }
+
 input[type=text] {
     width: 100%;
     padding: 12px;
@@ -174,15 +334,18 @@ input[type=text] {
     resize: vertical;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
+
 input[type=text]:hover {
     box-shadow: 0 0 5px #00004d inset;
 }
+
 input[type="submit"]:hover {
     background-color:white;
     color:black;
     transform:scale(1.5);
     transition:transform 1.5s
 }
+
 form {
     border-radius: 5px;
     background-color:white;
