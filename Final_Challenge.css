@@ -189,6 +189,7 @@ to {top: 0vw;}
     height: auto; 
     padding-top: 4%;
     position: relative; 
+    margin: auto;
 }
 
 /* Remove the underline from the previous and next buttons on the slideshow */
