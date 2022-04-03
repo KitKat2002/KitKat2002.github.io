@@ -259,7 +259,7 @@ img {
     height: 4px; 
     width: 4px;
     margin: 4px;
-    background-color: slategray; 
+    background-color: black; 
     border-radius: 50%;
     display: inline-block; 
     transition: background-color 0.6s ease; 
